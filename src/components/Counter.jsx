@@ -1,13 +1,24 @@
 import React, {useEffect, useState} from 'react';
-import { connect } from 'react-redux'
 
 export default function Counter({total, onClick}) {
 
   const [count, setCount] = useState(0);
+  const [person, setPerson] = useState({
+    name: '엘리',
+    title: '개발자',
+    mentor: {
+      name: '밥',
+      title: '시니어개발자',
+    },
+  });
+
+  
+    
 
   useEffect(() => {
     // 의존성 배열에 count 변수를 추가하여 count 값이 업데이트될 때마다 실행됩니다.
     console.log('count updated:', count);
+    ;
   }, [count]);
 
   const handleClick = () => {
